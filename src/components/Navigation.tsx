@@ -58,10 +58,20 @@ export function Navigation() {
           <a
             href="#home"
             onClick={(e) => { e.preventDefault(); scrollTo("#home"); }}
-            className="text-sand font-extrabold text-sm tracking-[0.3em]"
-            style={{ fontFamily: "var(--font-heading)" }}
+            className="flex items-center gap-3 group"
           >
-            HELM TECH
+            {/* Helm wheel logomark */}
+            <img
+              src="/logo.svg"
+              alt="Helm Tech"
+              className="w-8 h-8 transition-transform duration-300 group-hover:rotate-[45deg]"
+            />
+            <span
+              className="text-sand font-extrabold text-sm tracking-[0.3em]"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              HELM TECH
+            </span>
           </a>
 
           {/* Desktop links */}

@@ -24,10 +24,19 @@ export function LoadingScreen() {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="fixed inset-0 z-[10001] bg-black flex items-center justify-center"
+          className="fixed inset-0 z-[10001] bg-black flex flex-col items-center justify-center gap-6"
           exit={{ y: "-100%" }}
           transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
         >
+          {/* Logo mark */}
+          <motion.img
+            src="/logo.svg"
+            alt="Helm Tech"
+            className="w-16 h-16 md:w-20 md:h-20"
+            initial={{ opacity: 0, scale: 0.5, rotate: -90 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          />
           <div className="flex gap-[2px] md:gap-1">
             {LETTERS.map((letter, i) => (
               <motion.span

@@ -13,7 +13,7 @@ function PortfolioCard({
   project: (typeof PORTFOLIO)[number];
   index: number;
 }) {
-  const cardRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLAnchorElement>(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const { ref, isInView } = useInView();
 
@@ -34,11 +34,14 @@ function PortfolioCard({
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: index * 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
     >
-      <div
+      <a
+        href={project.href}
+        target="_blank"
+        rel="noopener noreferrer"
         ref={cardRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="group bg-black rounded-2xl border border-white/5 p-8 md:p-10 transition-shadow duration-500 hover:shadow-[0_0_60px_rgba(46,204,113,0.1)] hover:border-emerald/20"
+        className="block group bg-black rounded-2xl border border-white/5 p-8 md:p-10 transition-shadow duration-500 hover:shadow-[0_0_60px_rgba(46,204,113,0.1)] hover:border-emerald/20"
         style={{
           transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
           transition: "transform 0.3s ease-out, box-shadow 0.5s, border-color 0.5s",
@@ -60,7 +63,7 @@ function PortfolioCard({
 
         <p className="text-emerald text-sm font-medium mb-4">{project.url}</p>
         <p className="text-sand/50 leading-relaxed">{project.description}</p>
-      </div>
+      </a>
     </motion.div>
   );
 }

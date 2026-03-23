@@ -84,14 +84,30 @@ export const PORTFOLIO = [
   {
     name: "The Black & Yellow",
     url: "theblackandyellow.com",
+    href: "https://theblackandyellow.com",
     description:
       "A bold, high-impact digital identity built from the ground up — designed to capture attention, communicate brand values, and drive engagement from the very first visit.",
   },
   {
     name: "Apex Human Company",
     url: "theapexhumancompany.com",
+    href: "https://theapexhumancompany.com",
     description:
       "A premium wellness and performance brand brought to life online — featuring seamless user journeys, integrated booking systems, and a design language that reflects authority.",
+  },
+  {
+    name: "Shotgun",
+    url: "yourshotgun.com",
+    href: "https://yourshotgun.com",
+    description:
+      "The AI execution engine — a desktop application that moves beyond the text box to execute complex workflows across your entire digital workspace with 522+ integrated tools.",
+  },
+  {
+    name: "Top Studios",
+    url: "topstudios.design",
+    href: "https://topstudios.design",
+    description:
+      "A creative studio platform built for visual storytelling — featuring immersive layouts, dynamic portfolios, and a design system that elevates creative work to its fullest potential.",
   },
 ] as const;
 

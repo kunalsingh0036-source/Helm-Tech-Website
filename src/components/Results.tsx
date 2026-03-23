@@ -17,9 +17,9 @@ function ResultStat({ item }: { item: (typeof RESULTS)[number] }) {
   const displayValue = "isStatic" in item && item.isStatic ? item.value : count;
 
   return (
-    <div ref={ref} className="text-center">
+    <div ref={ref} className="text-center px-2">
       <div
-        className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-emerald mb-3"
+        className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-emerald mb-4"
         style={{
           fontFamily: "var(--font-heading)",
           textShadow: "0 0 60px rgba(46, 204, 113, 0.2)",
@@ -28,6 +28,7 @@ function ResultStat({ item }: { item: (typeof RESULTS)[number] }) {
         {displayValue}
         {item.suffix}
       </div>
+      <div className="w-8 h-[2px] bg-emerald/30 mx-auto mb-3" />
       <p className="text-sand/50 text-sm md:text-base">{item.label}</p>
     </div>
   );
@@ -49,7 +50,7 @@ export function Results() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-10 max-w-5xl mx-auto">
           {RESULTS.map((item) => (
             <ResultStat key={item.label} item={item} />
           ))}
