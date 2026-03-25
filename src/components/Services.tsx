@@ -33,7 +33,7 @@ function WebsiteBuilder() {
         </div>
 
         {/* Website layers */}
-        <div className="p-4 space-y-3 min-h-[280px]">
+        <div className="p-4 space-y-3 h-[320px]">
           <motion.div
             style={{ opacity: headerOpacity }}
             className="h-8 bg-smoke/80 rounded-md flex items-center px-3 gap-4"
@@ -87,7 +87,7 @@ function ChatDemo() {
         <span className="text-xs text-sand/60 font-medium">AI Agent</span>
         <span className="ml-auto w-2 h-2 rounded-full bg-emerald animate-pulse" />
       </div>
-      <div className="p-4 space-y-3 min-h-[280px]">
+      <div className="p-4 space-y-3 h-[320px]">
         {CHAT_MESSAGES.map((msg, i) => (
           <motion.div
             key={i}
@@ -133,7 +133,7 @@ export function Services() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Websites */}
           <div>
             <div className="flex items-center gap-3 mb-6">

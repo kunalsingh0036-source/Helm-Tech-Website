@@ -16,7 +16,7 @@ function StatCard({ stat, index }: { stat: (typeof STATS)[number]; index: number
   return (
     <motion.div
       ref={ref}
-      className="bg-black rounded-2xl border-l-4 border-emerald p-8 md:p-10 flex flex-col justify-between min-h-[260px]"
+      className="bg-black rounded-2xl border-l-4 border-emerald p-8 md:p-10"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

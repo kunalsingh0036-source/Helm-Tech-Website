@@ -7,8 +7,9 @@ export const BRAND = {
     smoke: "#3B3B3B",
   },
   contact: {
-    email: "info@helmtech.com",
+    email: "info@helmtech.in",
     phone: "+91 99930 94281",
+    website: "helmtech.in",
     instagram: "@helm_tech",
   },
 } as const;

@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import { useInView } from "@/hooks/useInView";
 import { MagneticButton } from "./MagneticButton";
 import { BRAND } from "@/lib/constants";
-import { Mail, Phone, ArrowRight } from "lucide-react";
+import { Mail, Phone, Globe, ArrowRight } from "lucide-react";
 
 export function Contact() {
   const { ref, isInView } = useInView();
@@ -56,6 +56,15 @@ export function Contact() {
               >
                 <Phone size={18} className="text-emerald" />
                 <span className="text-sm">{BRAND.contact.phone}</span>
+              </a>
+              <a
+                href={`https://${BRAND.contact.website}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-sand/60 hover:text-emerald transition-colors group"
+              >
+                <Globe size={18} className="text-emerald" />
+                <span className="text-sm">{BRAND.contact.website}</span>
               </a>
             </div>
           </motion.div>
