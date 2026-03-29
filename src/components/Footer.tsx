@@ -36,6 +36,13 @@ export function Footer() {
             <p className="text-sand/40 text-xs mb-1">{BRAND.contact.email}</p>
             <p className="text-sand/30 text-xs">
               &copy; 2026 Helm Tech. All rights reserved.
+              <span className="mx-2">·</span>
+              <a
+                href="/privacy-policy"
+                className="text-sand/40 hover:text-emerald transition-colors"
+              >
+                Privacy Policy
+              </a>
             </p>
           </div>
         </div>
