@@ -64,13 +64,15 @@ def render(size: int, t_color, arm_color, bg=(0, 0, 0, 0)) -> Image.Image:
 
 
 def main():
-    # Dark-bg variant (canonical) — cream T + green-500 arm, transparent bg
+    # Dark-variant PNGs — cream T + green-500 arm, INK background baked in
+    # (so they're usable when uploaded to platforms with light/white surfaces)
+    ink_bg = (10, 10, 10, 255)
     for n in SIZES:
-        img = render(n, t_color=DARK_T, arm_color=DARK_ARM)
+        img = render(n, t_color=DARK_T, arm_color=DARK_ARM, bg=ink_bg)
         out = OUT / (f"favicon-{n}.png" if n == 32 else f"logo-{n}.png")
         img.save(out, "PNG")
         print(f"wrote {out.name}  {img.size}")
-    # Light-bg variant — ink T + emerald arm on cream
+    # Light-variant PNGs — ink T + emerald arm on cream
     for n in SIZES:
         img = render(n, t_color=INK, arm_color=EMERALD, bg=CREAM)
         out = OUT / (f"favicon-light-{n}.png" if n == 32 else f"logo-light-{n}.png")
