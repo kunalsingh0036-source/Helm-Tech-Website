@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { syne, dmSans } from "@/lib/fonts";
+import { poppins } from "@/lib/fonts";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { CustomCursor } from "@/components/CustomCursor";
 import { GrainOverlay } from "@/components/GrainOverlay";
@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${syne.variable} ${dmSans.variable}`}>
+    <html lang="en" className={poppins.variable}>
       <body>
         <SmoothScroll>
           <LoadingScreen />

@@ -1,15 +1,17 @@
-import { Syne, DM_Sans } from "next/font/google";
+// Canonical fonts per HelmTech_BrandIdentity.pdf:
+//   - Display: Satoshi (loaded via Fontshare CDN — see globals.css @import)
+//   - Body:    Poppins (loaded here via next/font/google)
+//
+// Satoshi isn't on Google Fonts; it's hosted free by ITF/Fontshare.
+// We expose its CSS variable name (--font-heading) here so the
+// className spread on <html> in layout.tsx still binds it for
+// Tailwind / inline `style` consumers, even though the actual @font-face
+// lives in globals.css.
+import { Poppins } from "next/font/google";
 
-export const syne = Syne({
-  subsets: ["latin"],
-  variable: "--font-heading",
-  display: "swap",
-  weight: ["400", "600", "700", "800"],
-});
-
-export const dmSans = DM_Sans({
+export const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700"],
 });

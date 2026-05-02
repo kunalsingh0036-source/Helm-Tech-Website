@@ -1,16 +1,23 @@
+/* Satoshi — display font per HelmTech_BrandIdentity.pdf.
+   Satoshi isn't on Google Fonts; ITF / Fontshare hosts it free.
+   Poppins (body font) is loaded via next/font/google in src/lib/fonts.ts.
+   Note: this @import must come BEFORE the tailwindcss import — CSS @import
+   rules must precede all other rules. */
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap');
 @import "tailwindcss";
 
 @theme inline {
-  --color-black: #111111;
-  --color-emerald: #2ECC71;
+  /* Per HelmTech_BrandIdentity.pdf — canonical palette (Kunal-confirmed 2026-05-02). */
+  --color-black: #111111;          /* Matte Black — authority, grounding */
+  --color-emerald: #2ECC71;        /* Emerald Green — growth, technology accent */
   --color-emerald-dark: #27AE60;
   --color-emerald-glow: rgba(46, 204, 113, 0.15);
-  --color-sand: #E8DFD6;
+  --color-sand: #E8DFD6;           /* Soft Sand — warm surface, distinct from generic white */
   --color-smoke: #3B3B3B;
   --color-white-soft: #FAFAFA;
 
-  --font-heading: "Syne", system-ui, sans-serif;
-  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-heading: "Satoshi", system-ui, sans-serif;
+  --font-body: "Poppins", system-ui, sans-serif;
 }
 
 /* ── Base ──────────────────────────────────── */
